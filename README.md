@@ -1,2 +1,2 @@
-# Project-Showcase
+# MSCI-Showcase
 MSC Center internship
