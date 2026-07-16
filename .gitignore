@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -11,20 +11,45 @@
 !.yarn/versions
 
 # testing
-/coverage
+/coverage/
+/.nyc_output/
+/playwright-report/
+/test-results/
 
 # next.js
 /.next/
 /out/
 
 # production
-/build
+/build/
+
+# local databases
+/prisma/*.db
+/prisma/*.db-journal
+/prisma/*.db-shm
+/prisma/*.db-wal
+
+# supabase cli
+/.supabase/
+/supabase/.temp/
+
+# local agent skills
+/.agents/
+/skills-lock.json
 
 # misc
 .DS_Store
+Thumbs.db
+Desktop.ini
 *.pem
 
+# editors
+/.idea/
+/.vscode/
+*.swp
+
 # debug
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -35,8 +60,10 @@ yarn-error.log*
 !.env.example
 
 # vercel
-.vercel
+/.vercel/
 
-# typescript
+# caches and generated types
+/.turbo/
+.eslintcache
 *.tsbuildinfo
 next-env.d.ts
